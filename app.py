@@ -288,6 +288,8 @@ scenario_df = pd.DataFrame({
     ]
 })
 
+# Convert Values column to string for Streamlit compatibility
+scenario_df["Values"] = scenario_df["Values"].astype(str)
 st.dataframe(
     scenario_df,
     use_container_width=True,
